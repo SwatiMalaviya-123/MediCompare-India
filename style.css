@@ -1,0 +1,276 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    padding: 30px;
+}
+
+/* Main Container */
+body > div{
+    max-width: 1200px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+h1{
+    text-align: center;
+    color: #1e88e5;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+}
+
+h2{
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* Search Section */
+.search-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+select{
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+select:focus{
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30,136,229,0.4);
+}
+
+/* Input */
+input[type="text"]{
+    flex: 1;
+    min-width: 250px;
+    max-width: 450px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus{
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30,136,229,0.4);
+}
+
+/* Button */
+button{
+    padding: 12px 20px;
+    border: none;
+    background-color: #1e88e5;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    background-color: #1565c0;
+}
+
+/* Table */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Table Header */
+thead{
+    background-color: #1e88e5;
+    color: white;
+}
+
+th{
+    padding: 14px;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Table Rows */
+td{
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+tbody tr{
+    transition: 0.2s;
+}
+
+tbody tr:hover{
+    background-color: #eaf4ff;
+}
+
+/* Clickable Rows */
+tbody tr{
+    cursor: pointer;
+}
+
+/* Highlight Original Medicine */
+tbody tr[style]{
+    background-color: #fff3cd !important;
+    font-weight: bold;
+}
+
+td, th{
+    vertical-align: middle;
+}
+
+/* Save Amount */
+td[style]{
+    font-weight: bold;
+}
+
+/* Result & Alternative Section */
+#result,
+#alternatives{
+    margin-top: 20px;
+}
+
+/* Loading / Error Messages */
+#result div,
+#alternatives div{
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: #666;
+}
+
+.pagination{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+.pagination button{
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.pagination button:disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.comparison-row td{
+    background-color: #f8fbff;
+    padding: 20px;
+}
+
+.comparison-wrapper{
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: auto;
+    animation: fadeIn 0.2s ease;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    padding: 15px;
+}
+
+.comparison-table{
+    margin-top: 15px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-table th{
+    background-color: #1565c0;
+    color: white;
+}
+
+.comparison-table td,
+.comparison-table th{
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.original-row{
+    background-color: #fff3cd;
+    font-weight: bold;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px){
+
+    body{
+        padding: 15px;
+    }
+
+    body > div{
+        padding: 20px;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+    input[type="text"]{
+        width: 100%;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    th,
+    td{
+        font-size: 13px;
+    }
+    .search-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button,
+    select,
+    input[type="text"]{
+        width: 100%;
+    }
+}

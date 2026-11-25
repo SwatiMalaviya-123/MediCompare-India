@@ -1,0 +1,10 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+database-for-beginners.md
+schema-explained.txt
+janaushadhi.csv
+query.pgsql

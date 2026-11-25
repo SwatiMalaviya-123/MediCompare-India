@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MediComapre</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <div>
+            <h1>MediCompare</h1>
+
+            <div class="search-container">
+
+                <select id="searchType">
+                    <option value="medicine">Medicine Name</option>
+                    <option value="composition">Composition + Strength</option>
+                </select>
+
+                <input id="searchInput" type="text" placeholder="Search Medicine..."/>
+
+                <button id="searchBtn" onclick="searchMedicine()">
+                    Search
+                </button>
+
+            </div>
+
+            <div id="result"></div>
+
+            <div id="alternatives"></div>
+            
+        </div>
+    </body>
+</html>
